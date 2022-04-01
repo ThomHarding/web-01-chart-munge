@@ -10,12 +10,14 @@ const labels = [
 ];
 let dataMap = [];
 for (let data of exportData) {
-    if (dataMap.purchase_frequency) {
-        dataMap.purchase_frequency++;
+    if (dataMap[data.purchase_frequency]) {
+        dataMap[data.purchase_frequency]++;
     } else {
-        dataMap.purchase_frequency = 1;
+        dataMap[data.purchase_frequency] = 1;
     }
 }
+
+console.log(dataMap);
 
 const dataOne = {
     labels: ['Once', 'Seldom', 'Often', 'Daily', 'Weekly', 'Monthly', 'Yearly'],
