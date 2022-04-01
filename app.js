@@ -42,10 +42,6 @@ const dataOne = {
     }]
 };
 
-console.log(purchaseFreqMap);
-console.log(coolFactorMap);
-console.log(genderMap);
-
 const dataTwo = {
     labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
     datasets: [{
@@ -80,7 +76,16 @@ const dataThree = {
             'rgb(255, 0, 0)'
         ],
         hoverOffset: 4,
-        data: genderMap,
+        data: [
+            genderMap['Agender'],
+            genderMap['Bigender'],
+            genderMap['Female'],
+            genderMap['Genderfluid'],
+            genderMap['Genderqueer'],
+            genderMap['Male'],
+            genderMap['"Non-binary"'],
+            genderMap['Polygender']
+        ],
     }]
 };
 
