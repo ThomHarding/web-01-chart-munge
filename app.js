@@ -26,11 +26,25 @@ const dataOne = {
     labels: ['Daily', 'Monthly', 'Never', 'Often', 'Once', 'Seldom', 'Weekly', 'Yearly'],
     datasets: [{
         label: 'Customers by Purchase Frequency',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: purchaseFreqMap
+        backgroundColor: 'rgb(124, 0, 132)',
+        borderColor: 'rgb(255, 99, 0)',
+        data: 
+          [
+              purchaseFreqMap['Daily'],
+              purchaseFreqMap['Monthly'],
+              purchaseFreqMap['Never'],
+              purchaseFreqMap['Often'],
+              purchaseFreqMap['Once'],
+              purchaseFreqMap['Seldom'],
+              purchaseFreqMap['Weekly'],
+              purchaseFreqMap['Yearly']
+          ]
     }]
 };
+
+console.log(purchaseFreqMap);
+console.log(coolFactorMap);
+console.log(genderMap);
 
 const dataTwo = {
     labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
@@ -73,8 +87,10 @@ const dataThree = {
 
 const configOne = {
     type: 'line',
-    datasets: dataOne,
-    options: {}
+    data: dataOne,
+    options: {
+        xAxisKey: 'purchase_frequency',
+    }
 };
 
 const configTwo = {
