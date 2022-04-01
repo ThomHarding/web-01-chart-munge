@@ -22,8 +22,6 @@ for (let data of exportData) {
     }
 }
 
-console.log(coolFactorMap);
-
 const dataOne = {
     labels: ['Daily', 'Monthly', 'Never', 'Often', 'Once', 'Seldom', 'Weekly', 'Yearly'],
     datasets: [{
@@ -35,10 +33,10 @@ const dataOne = {
 };
 
 const dataTwo = {
-    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
     datasets: [{
         label: 'Customers by Cool Factor',
-        backgroundColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgb(0, 99, 132)',
         borderColor: 'rgb(255, 99, 132)',
         data: coolFactorMap,
     }]
@@ -66,8 +64,8 @@ const dataThree = {
             'rgb(255, 99, 255)',
             'rgb(0, 0, 132)',
             'rgb(255, 0, 0)'
-        ], 
-        borderColor: 'rgb(255, 99, 132)',
+        ],
+        hoverOffset: 4,
         data: genderMap,
     }]
 };
@@ -91,17 +89,17 @@ const configThree = {
     options: {}
 };
 
-const chartOne = new Chart(
+const chartOne = new Chart(// eslint-disable-line
     document.getElementById('custByPurchFreqBar'),
     configOne
 );
 
-const chartTwo = new Chart(
+const chartTwo = new Chart(// eslint-disable-line
     document.getElementById('custByCoolFactorLine'),
     configTwo
 );
 
-const chartThree = new Chart(
+const chartThree = new Chart(// eslint-disable-line
     document.getElementById('custByGenderPie'),
     configThree
 );
